@@ -1,0 +1,12 @@
+Phone Book
+==========
+
+Phone Book application contains:
+
+* embedded Apache Directory service for propagation phone numbers to SIP phones
+* embedded Jetty HTTP service to serve FreeSWITCH mod_xml_curl authentication requests from SIP phones
+
+TODO:
+
+* Don't allow to read another's passwords (see http://directory.apache.org/apacheds/1.5/25-authorization.html)
+* Add embedded RADIUS/DIAMETER service to connect SIP phones via PPPoE

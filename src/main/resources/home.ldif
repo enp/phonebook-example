@@ -1,0 +1,27 @@
+dn: dc=home
+dc: home
+o: Home LDAP Server
+administrativeRole: accessControlSpecificArea
+objectclass: dcObject
+objectclass: organization
+
+dn: cn=enableSearchForAllUsers,dc=home
+objectClass: top
+objectClass: subentry
+objectClass: accessControlSubentry
+subtreeSpecification: {}
+cn: enableSearchForAllUsers
+administrativeRole: accessControlSpecificArea
+prescriptiveACI: { identificationTag "enableSearchForAllUsers", precedence 14, authenticationLevel simple, itemOrUserFirst userFirst: { userClasses { allUsers }, userPermissions { { protectedItems {entry, allUserAttributeTypesAndValues}, grantsAndDenials { grantRead, grantReturnDN, grantBrowse } } } } }
+
+dn:cn=123,dc=home
+sn:user123
+telephoneNumber: 123
+userPassword: 123
+objectClass: person
+
+dn:cn=124,dc=home
+sn:user124
+telephoneNumber: 124
+userPassword: 124
+objectClass: person
